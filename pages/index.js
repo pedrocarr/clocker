@@ -19,11 +19,24 @@ export default function Home() {
           Crie sua agenda compartilhada
         </Text>
       </Box>
-
-      <FormControl id="email" isRequired>
+      <Box>
+      <FormControl id="email" p={4} isRequired>
         <FormLabel> Email address </FormLabel> <Input type="email" />
-        <FormHelperText> We 'll never share your email.</FormHelperText>
       </FormControl>
+
+      <FormControl id="password" p={4} isRequired>
+        <FormLabel> Senha </FormLabel> <Input type="password" />
+      </FormControl>
+      <Box display="flex" flexDirection="row" alignItems="center">
+        <Text>clocker.work/</Text>
+      <FormControl id="username" p={4} isRequired>
+        <Input type="username" />
+      </FormControl>
+      </Box>
+      <Box p={4}>
+      <Button width="100%" p={4}>Entrar</Button>
+      </Box>
+      </Box>
     </Container>
   );
 }
