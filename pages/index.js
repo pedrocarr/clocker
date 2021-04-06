@@ -1,9 +1,11 @@
+import { Container, Box, Button, Input  } from '@chakra-ui/react'
 import { Logo } from './../components'
+
 
 export default function Home() {
   return (
-    <div>
+    <Container>
       <Logo />
-    </div>
+    </Container>
   )
 }
