@@ -9,6 +9,7 @@ import {
   Text,
   FormControl,
   FormLabel,
+  FormHelperText
 } from "@chakra-ui/react";
 
 import { Logo } from "./../components";
@@ -40,15 +41,18 @@ export default function Home() {
       <Box>
       <FormControl id="email" p={4} isRequired>
         <FormLabel> Email address </FormLabel> <Input type="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} />
+        <FormHelperText textColor="#e74c3c">{formik.errors.email}}</FormHelperText>
       </FormControl>
 
       <FormControl id="password" p={4} isRequired>
         <FormLabel> Senha </FormLabel> <Input type="password" value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} />
+        <FormHelperText textColor="#e74c3c">{formik.errors.password}}</FormHelperText>
       </FormControl>
       <Box display="flex" flexDirection="row" alignItems="center">
         <Text>clocker.work/</Text>
       <FormControl id="username" p={4} isRequired>
         <Input type="username" value={formik.values.username} onChange={formik.handleChange} onBlur={formik.handleBlur} />
+        <FormHelperText textColor="#e74c3c">{formik.errors.username}}</FormHelperText>
       </FormControl>
       </Box>
       <Box p={4}>
