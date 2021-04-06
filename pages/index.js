@@ -39,16 +39,16 @@ export default function Home() {
       </Box>
       <Box>
       <FormControl id="email" p={4} isRequired>
-        <FormLabel> Email address </FormLabel> <Input type="email" />
+        <FormLabel> Email address </FormLabel> <Input type="email" /> values={formik.values.email}
       </FormControl>
 
       <FormControl id="password" p={4} isRequired>
-        <FormLabel> Senha </FormLabel> <Input type="password" />
+        <FormLabel> Senha </FormLabel> <Input type="password" values={formik.values.password} />
       </FormControl>
       <Box display="flex" flexDirection="row" alignItems="center">
         <Text>clocker.work/</Text>
       <FormControl id="username" p={4} isRequired>
-        <Input type="username" />
+        <Input type="username" values={formik.values.username} />
       </FormControl>
       </Box>
       <Box p={4}>
