@@ -1,3 +1,6 @@
+import { useFormik } from 'formik';
+import * as yup from 'yup';
+
 import {
   Container,
   Box,
@@ -6,11 +9,26 @@ import {
   Text,
   FormControl,
   FormLabel,
-  FormHelperText,
 } from "@chakra-ui/react";
+
 import { Logo } from "./../components";
 
+const validationSchema = yup.object().shape({
+  email: yup.string().email('E-mail inválido').required('Preenchimento obrigatório'),
+  password: yup.string().required('Preenchimento obrigatório'),
+  username: yup.string().required("Preenchimento obrigatório"),
+})
+
 export default function Home() {
+  const formik = useFormik({
+    onSubmit: () => { },
+    validationSchema,
+    initialValues: {
+      email: '',
+      username: '',
+      password: ''
+    }
+  })
   return (
     <Container p={4} centerContent>
       <Logo />
